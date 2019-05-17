@@ -2,26 +2,26 @@ body {
   background-color: black;
 }
 
-.balls {
-  height: 50px;
-  width: 50px;
-}
-
 #pokeball {
   position: fixed;
   bottom: 5%;
   right: 5%;
 }
 
+.balls {
+  height: 50px;
+  width: 50px;
+}
+
 .roll {
-	-webkit-animation: roll 1.65s linear both;
-	        animation: roll 1.65s linear both;
+	-webkit-animation: roll 1.7s linear both;
+	        animation: roll 1.7s linear both;
 }
 
 @-webkit-keyframes roll {
   0% {
-    -webkit-transform: translateX(-800px) rotate(-540deg);
-            transform: translateX(-800px) rotate(-540deg);
+    -webkit-transform: translateX(-1200px) rotate(-540deg);
+            transform: translateX(-1200px) rotate(-540deg);
     opacity: 0;
   }
   100% {
@@ -30,10 +30,11 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes roll {
   0% {
-    -webkit-transform: translateX(-800px) rotate(-540deg);
-            transform: translateX(-800px) rotate(-540deg);
+    -webkit-transform: translateX(-1200px) rotate(-540deg);
+            transform: translateX(-1200px) rotate(-540deg);
     opacity: 0;
   }
   100% {
