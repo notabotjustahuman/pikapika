@@ -3,8 +3,8 @@ body {
 }
 
 .balls {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 
 #pokeball {
@@ -13,12 +13,12 @@ body {
   right: 5%;
 }
 
-.roll-in-left {
-	-webkit-animation: roll-in-left 1.65s linear both;
-	        animation: roll-in-left 1.65s linear both;
+.roll {
+	-webkit-animation: roll 1.65s linear both;
+	        animation: roll 1.65s linear both;
 }
 
-@-webkit-keyframes roll-in-left {
+@-webkit-keyframes roll {
   0% {
     -webkit-transform: translateX(-800px) rotate(-540deg);
             transform: translateX(-800px) rotate(-540deg);
@@ -30,7 +30,7 @@ body {
     opacity: 1;
   }
 }
-@keyframes roll-in-left {
+@keyframes roll {
   0% {
     -webkit-transform: translateX(-800px) rotate(-540deg);
             transform: translateX(-800px) rotate(-540deg);
