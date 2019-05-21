@@ -14,8 +14,8 @@ body {
 }
 
 .roll {
-	-webkit-animation: roll 1.7s linear both;
-	        animation: roll 1.7s linear both;
+	-webkit-animation: roll 1.75s linear both;
+	        animation: roll 1.75s linear both;
 }
 
 @-webkit-keyframes roll {

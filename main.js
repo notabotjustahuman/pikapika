@@ -2,16 +2,17 @@ const ALL_POKEMON = []
 
 function pokemonFinder() {
   var pokedex = prompt('Enter Pokémon ID Number')
-  console.log(`searched for ${pokedex}`);
   var xhttp = new XMLHttpRequest();
-  xhttp.onreadychange = function() {
+  console.log(`searched for ${pokedex}`)
+  xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       let data = JSON.parse(this.responseText)
+      console.log(data)
       for (item in data) {
         let pokemon = new Pokemon(item,
-                                  data[item].name,)
+                                  data[item].name)
                                   // date[item].type,)
-        // console.log(Pokemon)
+        ALL_POKEMON.push(pokemon)
       }
     }
   }
@@ -23,9 +24,6 @@ class Pokemon {
   constructor(name) {
     this.name = name
     // this.type = type
-    if (ALL_POKEMON.length < 810) {
-      ALL_POKEMON.push(this)
-    }
   }
 }
 
