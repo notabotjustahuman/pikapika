@@ -30,8 +30,9 @@ function pokemonFinder() {
 pokemonFinder()
 
 displayPokemon = () => {
-  let cont = document.createElement('div')
+  let cont = document.createElement('div', 'test')
   let h1 = document.createElement('h1')
+  let img = document.createElement('img')
   let p1 = document.createElement('p1')
   let p2 = document.createElement('p2')
   let p3 = document.createElement('p3')
@@ -40,7 +41,6 @@ displayPokemon = () => {
   let p6 = document.createElement('p6')
   let p7 = document.createElement('p7')
   let p8 = document.createElement('p8')
-  let img = document.createElement('img')
 
   h1.innerText = pokemon['name']
   p1.innerText = pokemon['hp']
@@ -52,6 +52,8 @@ displayPokemon = () => {
   p7.innerText = pokemon['abilities']
   p8.innerText = pokemon['abilities2']
   img.setAttribute('src', pokemon['sprite'])
+  img.setAttribute('class', 'picture')
+  cont.setAttribute('class', 'info')
   cont.appendChild(h1)
   cont.appendChild(p1)
   cont.appendChild(p2)
@@ -65,4 +67,5 @@ displayPokemon = () => {
   document.body.appendChild(cont)
 }
 
+setTimeout(displayPokemon, 300)
 // displayPokemon()
