@@ -1,6 +1,10 @@
-/* body {
-  background-color: black;
-} */
+body {
+  background-color: grey;
+}
+
+#searchBar {
+  width: 225px;
+}
 
 #pokeball {
   position: fixed;
