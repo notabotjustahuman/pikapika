@@ -3,7 +3,6 @@ body {
 }
 
 #searchBar {
-  position: fixed;
   width: 225px;
 }
 
@@ -24,6 +23,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 96px;
+  height: 96px;
 }
 
 .balls {
