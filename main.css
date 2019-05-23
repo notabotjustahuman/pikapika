@@ -3,6 +3,7 @@ body {
 }
 
 #searchBar {
+  position: fixed;
   width: 225px;
 }
 
@@ -15,13 +16,14 @@ body {
 .info {
   text-align: center;
   display: grid;
+  font-family: sans-serif;
+  height: 250px;
 }
 
 .picture {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 18%;
 }
 
 .balls {
