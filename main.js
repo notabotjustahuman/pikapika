@@ -42,13 +42,13 @@ displayPokemon = () => {
   let p7 = document.createElement('p7')
 
   h1.innerText = pokemon['name']
-  p1.innerText = pokemon['hp']
-  p2.innerText = pokemon['attack']
-  p3.innerText = pokemon['defense']
-  p4.innerText = pokemon['speed']
-  p5.innerText = pokemon['spattack']
-  p6.innerText = pokemon['spdefense']
-  p7.innerText = pokemon['abilities']
+  p1.innerText = `Hp: ${pokemon['hp']}`
+  p2.innerText = `Attack: ${pokemon['attack']}`
+  p3.innerText = `Defense: ${pokemon['defense']}`
+  p4.innerText = `Speed: ${pokemon['speed']}`
+  p5.innerText = `Sp. Attack: ${pokemon['spattack']}`
+  p6.innerText = `Sp. Defense: ${pokemon['spdefense']}`
+  p7.innerText = `Ability: ${pokemon['abilities']}`
   img.setAttribute('src', pokemon['sprite'])
   img.setAttribute('class', 'picture')
   cont.setAttribute('class', 'info')
@@ -64,4 +64,17 @@ displayPokemon = () => {
   document.body.appendChild(cont)
 
   userInput.value=''
+}
+
+class Pokemon {
+  constructor(name, hp, attack, defense, speed, spattack, spdefense, abilities) {
+    this.name = name
+    this.hp = hp
+    this.attack = attack
+    this.defense = defense
+    this.speed = speed
+    this.spattck = spattack
+    this.spdefense = spdefense
+    this. ability = abilities
+  }
 }

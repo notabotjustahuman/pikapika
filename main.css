@@ -15,6 +15,7 @@ body {
 .info {
   text-align: center;
   display: grid;
+  text-transform: capitalize;
   font-family: sans-serif;
   height: 250px;
 }
