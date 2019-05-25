@@ -18,12 +18,20 @@ function pokemonFinder() {
           abilities: data['abilities'][0]['ability']['name'],
           sprite: data['sprites']['front_default']
         }
-        displayPokemon()
+        if (document.querySelector('.info') === null) {
+          displayPokemon()
+        }
+        else {
+          var teamRocket = document.querySelector('.info')
+          teamRocket.remove()
+          displayPokemon()
+        }
       }
     }
   if (isNaN(pokedex)) {
     xhttp.open("GET", `http://fizal.me/pokeapi/api/v2/name/${pokedex.toLowerCase()}.json`, true);
-  } else {
+  }
+  else {
     xhttp.open("GET", `http://fizal.me/pokeapi/api/v2/id/${pokedex}.json`, true);
   }
   xhttp.send();
@@ -48,6 +56,7 @@ displayPokemon = () => {
   p4.innerText = `Speed: ${pokemon['speed']}`
   p5.innerText = `Sp. Attack: ${pokemon['spattack']}`
   p6.innerText = `Sp. Defense: ${pokemon['spdefense']}`
+  // if ()
   p7.innerText = `Ability: ${pokemon['abilities']}`
   img.setAttribute('src', pokemon['sprite'])
   img.setAttribute('class', 'picture')
