@@ -1,0 +1,66 @@
+body {
+  background-color: grey;
+}
+
+#searchBar {
+  width: 225px;
+}
+
+#pokeball {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.info {
+  text-align: center;
+  display: grid;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  height: 250px;
+}
+
+.picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96px;
+  height: 96px;
+}
+
+.balls {
+  height: 35px;
+  width: 35px;
+}
+
+.roll {
+  -webkit-animation: roll 1.75s linear both;
+  animation: roll 1.75s linear both;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    -webkit-transform: translateX(-1200px) rotate(-540deg);
+    transform: translateX(-1200px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll {
+  0% {
+    -webkit-transform: translateX(-1200px) rotate(-540deg);
+    transform: translateX(-1200px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
