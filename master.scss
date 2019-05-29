@@ -5,7 +5,7 @@ body {
 
 
 #searchBar {
-  width: 218px;
+  width: 245px;
   height: 22px;
   margin-left: 40%;
   margin-top: 30px;
@@ -15,6 +15,9 @@ body {
   margin-left: 20px;
   height: 100px;
   width: 100px;
+  :hover {
+    cursor: pointer;
+  }
 }
 
 .info {
@@ -22,7 +25,6 @@ body {
   display: grid;
   text-transform: capitalize;
   font-family: sans-serif;
-  height: 250px;
 }
 
 .picture {

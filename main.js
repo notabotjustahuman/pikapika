@@ -1,6 +1,42 @@
 var userInput = document.getElementById('searchBar')
 var xhttp = new XMLHttpRequest();
 
+function misty(name) {
+  // var pokedex = name
+  // console.log(`searched for ${pokedex}`)
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let data = JSON.parse(this.responseText)
+      let ditto = [];
+      for (let i = 0; i < data['abilities'].length; i++) {
+        ditto.push(data['abilities'][i]['ability']['name']);
+      }
+      ditto = ditto.toString().replace(/,/g , ', ');
+        p = new Pokemon (
+          data['name'],
+          data['sprites']['front_default'],
+          data['stats'][5]['base_stat'],
+          data['stats'][4]['base_stat'],
+          data['stats'][3]['base_stat'],
+          data['stats'][0]['base_stat'],
+          data['stats'][2]['base_stat'],
+          data['stats'][1]['base_stat'],
+          ditto
+        )
+        if (document.querySelector('.info') === null) {
+          displayPokemon()
+        }
+        else {
+          var teamRocket = document.querySelector('.info')
+          teamRocket.remove()
+          displayPokemon()
+        }
+      }
+    }
+    xhttp.open("GET", `http://fizal.me/pokeapi/api/v2/name/${name.toLowerCase()}.json`, true);
+    xhttp.send();
+}
+
 function pokemonFinder() {
   var pokedex = userInput.value
   console.log(`searched for ${pokedex}`)

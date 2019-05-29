@@ -3,7 +3,7 @@ body {
 }
 
 #searchBar {
-  width: 218px;
+  width: 245px;
   height: 22px;
   margin-left: 40%;
   margin-top: 30px;
@@ -14,13 +14,15 @@ body {
   height: 100px;
   width: 100px;
 }
+#myPokemon :hover {
+  cursor: pointer;
+}
 
 .info {
   text-align: center;
   display: grid;
   text-transform: capitalize;
   font-family: sans-serif;
-  height: 250px;
 }
 
 .picture {
