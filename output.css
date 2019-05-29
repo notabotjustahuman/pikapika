@@ -2,6 +2,10 @@ body {
   background-color: grey;
 }
 
+#bars {
+  margin-top: 5%;
+}
+
 #searchBar {
   width: 225px;
 }
